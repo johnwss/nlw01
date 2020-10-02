@@ -100,8 +100,10 @@ h1,h2,h3,h4,h5,h6{
 
         transition: 400ms;
 
-        font-weight: bold;
+        
         color: white;
+
+
 }
 
 #page-home main a:hover{
@@ -115,4 +117,23 @@ background-color:#2fb86e;
         background-color: rgba(0,0,0,0.08);
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
+
+#page-home main a span:after{
+content: "";
+background-image: url(../assets/search.svg);
+width: 20px;
+height: 20px;
+}
+
+#page-home main a strong{
+
+       flex-grow: 1;
+       text-align:center;
+
+}
+
+
