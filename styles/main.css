@@ -1,3 +1,7 @@
+:root {
+        --title-color: #322153
+}
+
 html{
         font-family: 'Roboto', sans-serif;   
 }
@@ -12,7 +16,14 @@ header{
         justify-content: space-between;
 }
 
+a {
+        text-decoration: none;
+}
 
+h1,h2,h3,h4,h5,h6{
+        font-family: 'Ubuntu', sans-serif;
+        color: var(--title-color);
+}
 
 .content{
         width: 90%;
@@ -26,4 +37,29 @@ header{
         background: url("../assets/home-background.svg") no-repeat; 
         background-position:35vw bottom;
 
+}
+
+#page-home header a{
+        margin-top:48px;
+        display: flex;
+        color: var(--title-color);
+        font-weight: 700;
+        
+}
+
+#page-home header a span {
+        margin-right: 16px;
+        display: flex;
+        background-image: url("../assets/log-in.svg");
+        width:20px;
+        height: 20px;;
+}
+
+#page-home main {
+        max-width: 560px;
+}
+
+#page-home h1{
+        font-size: 54px;
+        
 }
