@@ -24,9 +24,26 @@
 }
 
 @media(min-width:1700px){
-#page-home{
-    background-position-x: 43vw;
-    }
+
+#page-home
+{
+background-position-x: 43vw;
+        }
 }
+
+@media(max-height:760px){
+#page-home
+{
+      background-position-y:90px;
+}
+}
+
+@media(min-height:1060px){
+        #page-home
+        {
+              background-position-y:480px;
+        }
+        }
+        
 
 
