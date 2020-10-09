@@ -53,7 +53,7 @@ form legend {
 
 }
 
-form legend {
+form legend h2 {
     font-size:23px;
 }
 
@@ -70,4 +70,25 @@ form .field-group{
     display: flex;
 
 }
+
+form input{
+
+    background-color:#f0f0f5;
+
+    border:0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+
+
+}
+
+form-select {
+    
+}
+
+
+
+
 
