@@ -46,6 +46,20 @@ form h1 {
 form fieldset {
     margin-top:64px;
     border:0px;
+}
 
+form legend {
+    margin-bottom: 40px;
 
 }
+
+form legend {
+    font-size:23px;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    
+}
+
