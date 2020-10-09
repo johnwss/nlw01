@@ -71,7 +71,8 @@ form .field-group{
 
 }
 
-form input{
+form input,
+form select{
 
     background-color:#f0f0f5;
 
@@ -84,10 +85,42 @@ form input{
 
 }
 
-form-select {
-    
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field {
+    margin-left: 20px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border:0;
+    margin-top: 40px;
+
+    transition: backgroud-color 400ms;
+
+
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
 
 
 
