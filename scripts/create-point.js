@@ -9,7 +9,7 @@ fetch(urlParaFetch).then(function funcaoresolvedora(dadosAlocadosAqui){
 function populandoAUF(){
     
     const ufSelect = document.querySelector("select[name=uf]")
-    const urlParaFetch = "https://servicodados.ibge.gov.br/api/v1/localidades/distritos"
+    const urlParaFetch = "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
 
     fetch(urlParaFetch).
         then(dadosAlocadosAqui => dadosAlocadosAqui.json())
