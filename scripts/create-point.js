@@ -20,8 +20,8 @@ function populandoAUF(){
 
         //for(const i of estadosBrRecebidos){
 
-        for(i of estadosBrRecebidos){
-            ufSelect.innerHTML +=  `<option value = "${i.id}">${i.nome}</option>`
+        for(constqlq of estadosBrRecebidos){
+            ufSelect.innerHTML +=  `<option value = "${constqlq.id}">${constqlq.nome}</option>`
         } 
         })
 
