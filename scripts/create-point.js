@@ -54,6 +54,9 @@ function buscarCidades(emTornoDeMim){
    
    // console.log(event.target.value)
      const urlFetchCidade = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${emTornoDeMim.target.value}/municipios`
+
+     SelectNoHtmlParaCidades.innerHTML = ""
+     
     fetch(urlFetchCidade).then(function(alocandoDados){return alocandoDados.json()}).then(function(cidades){
         for(cidade of cidades){
             SelectNoHtmlParaCidades.innerHTML += `<option value = "${cidade.id}">${cidade.nome}</option>`
