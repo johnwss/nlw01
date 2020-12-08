@@ -55,11 +55,13 @@ function buscarCidades(emTornoDeMim){
    // console.log(event.target.value)
      const urlFetchCidade = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${emTornoDeMim.target.value}/municipios`
 
-     SelectNoHtmlParaCidades.innerHTML = ""
+     SelectNoHtmlParaCidades.innerHTML = `<option>Selecione a Cidade</option>`
+     SelectNoHtmlParaCidades.innerHTML.disabled= true
+     
      
     fetch(urlFetchCidade).then(function(alocandoDados){return alocandoDados.json()}).then(function(cidades){
         for(cidade of cidades){
-            SelectNoHtmlParaCidades.innerHTML += `<option value = "${cidade.id}">${cidade.nome}</option>`
+            SelectNoHtmlParaCidades.innerHTML += `<option value = "${cidade.nome}">${cidade.nome}</option>`
         }
 
         SelectNoHtmlParaCidades.disabled = false
@@ -74,3 +76,13 @@ function buscarCidades(emTornoDeMim){
 
 document
 .querySelector("select[name=uf]").addEventListener("change", buscarCidades)
+
+const itemsParaColetar = document.querySelectorAll(".items-grid li")
+
+for(const item of itemsParaColetar){
+    item.addEventListener("click",handleSelectedItem)
+
+    function handleSelectedItem(eventoaqui){
+        console.log(eventoaqui.target)
+    }
+}
