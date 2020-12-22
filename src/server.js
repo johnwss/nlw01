@@ -1,8 +1,26 @@
-const expresso = require("express")
-const { Server } = require("http")
-const servidor = expresso()
+const meuExpresso = require("express")
+const meuServidor = meuExpresso()
 
-servidor.get("/", (req,res) => {
-res.send("vamos nessa!!")
+meuServidor.use(meuExpresso.static("public"))
+
+meuServidor.get("/", (req,res) => {
+    res.sendFile(__dirname + "/views/index.html")
 })
-servidor.listen(3000)
+
+meuServidor.get("/create-point", (req,res) => {
+    res.sendFile(__dirname + "/views/create-point.html")
+})
+
+meuServidor.get("/search-results", (req,res) => {
+    res.sendFile(__dirname + "/views/search-results.html")
+})
+
+
+meuServidor.listen("3000")
+
+
+
+
+
+
+
