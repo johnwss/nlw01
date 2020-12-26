@@ -1,22 +1,29 @@
 const meuExpresso = require("express")
 const meuServidor = meuExpresso()
+const nunjucks = require("nunjucks")
+
+meuServidor.listen("3000")
 
 meuServidor.use(meuExpresso.static("public"))
 
+
+nunjucks.configure("src/views",{
+    express: meuServidor,
+    noCache: true
+})
+
+
 meuServidor.get("/", (req,res) => {
-    res.sendFile(__dirname + "/views/index.html")
+    res.render( "index.html", {title: "Seu marketplace de coleta de resíduos"})
 })
 
 meuServidor.get("/create-point", (req,res) => {
-    res.sendFile(__dirname + "/views/create-point.html")
+    res.render( "create-point.html")
 })
 
-meuServidor.get("/search-results", (req,res) => {
-    res.sendFile(__dirname + "/views/search-results.html")
+meuServidor.get("/search", (req,res) => {
+    res.render(  "search-results.html")
 })
-
-
-meuServidor.listen("3000")
 
 
 
