@@ -1,5 +1,11 @@
 const meuExpresso = require("express")
 const meuServidor = meuExpresso()
+
+const bancoDeDados = require("./database/db")
+
+
+
+
 const nunjucks = require("nunjucks")
 
 meuServidor.listen("3000")
@@ -22,7 +28,31 @@ meuServidor.get("/create-point", (req,res) => {
 })
 
 meuServidor.get("/search", (req,res) => {
-    res.render(  "search-results.html")
+
+    //coletando do banco de dados
+
+    bancoDeDados.all(`SELECT * FROM localidades`, function(err, rows){
+
+                if(err){
+                    return console.log(err)
+                }
+
+                const total = rows.length
+        
+                    console.log("Estes são seus registros")
+                    console.log(rows)
+
+                    res.render(  "search-results.html", {localidades: rows, total: total})
+                //ou simplesmente ", total"
+            })
+        
+
+
+
+
+
+
+    
 })
 
 
