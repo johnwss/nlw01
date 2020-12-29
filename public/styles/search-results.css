@@ -4,9 +4,10 @@
 body ::after{
 
     content: "";
-    position: fixed;
+    position: absolute;
+    height: 16rem;
     background: white;
-    top: 260px;
+    top: 0px;
     right: 0;
     left: 0;
     bottom: 0;

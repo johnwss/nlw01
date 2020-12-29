@@ -115,10 +115,10 @@ let listaItems = []
         const itemEhDiferente = item != itemId
         return itemEhDiferente
 
-        //o i(chamado de "item" neste exemplo)compara uma posição de index e procurar averiguar se esta posição 
+        //o i(chamado de "item", neste exemplo)compara uma posição de index e procurar averiguar se esta posição 
         //difere de determinado valor atribuido(no caso,o valor dado no id,do html)
         //caso seja assim(true) siga para o proximo numero,até que o i("item")
-        //seja identificado na ordem da lista em seu indice com o valor (ex:3 pertecente a 1,de fato)
+        //seja identificado na ordem da lista em seu indice com o valor alvo (ex:3 pertecente a 1,de fato)
         //verificando que 3 pertence ao indice 1,o valor será removido daquele espaço,sendo apagado da lista.
         //na pratica,clicando em 3,o "for" irá fazer uma checagem no indice zero com todos os valores da lista,
         //vendo que não encontrou o match clicado(3),passará para o indice 1,encontrando então que um está indexado com o 3,ele dá o filter(pop)removendo-o.

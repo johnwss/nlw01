@@ -80,3 +80,15 @@
 #modal form button:hover {
     background-color: greenyellow;
 }
+
+#modal.point .conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#modal.point h1{
+    color: white;
+    margin-top: 32px;
+}

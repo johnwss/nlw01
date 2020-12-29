@@ -25,9 +25,9 @@
 
 <main>
 
-        {% if total >0 %}
+        {% if total > 0 %}
 
-        <h4><strong>{{total}}</strong>encontrados</h4>
+        <h4><strong>{{total}}</strong> encontrado(s)</h4>
 
 
 <div class="cards">
@@ -41,7 +41,7 @@
                 <h3>{{local.items}}</h3>
                 <p>
                         {{local.city}}, {{local.state}} <br/>
-                        {{local.state}}, {{local.state}} <br/>
+                        {{local.address}}, {{local.address2}} <br/>
                        
                 </p>
         </div>
@@ -51,7 +51,7 @@
         
         {%else%}
 
-        <h4><strong>Nenhum</strong>encontrado</h4>
+        <h4><strong>Nenhum</strong> encontrado</h4>
 
         {% endif %}
 
@@ -60,16 +60,7 @@
       
 
         
-        <div class="card">
-                <img src="./assets/photo-1528323273322-d81458248d40.jpg" alt="Coletoria">
-                <h1>Coletoria</h1>
-                <h3>Resíduos Eletrônicos</h3>
-                <p>
-                        Rio do Sul, Santa Catarina <br/>
-                        Guilherme Gembalia, Jardim América <br/>
-                        No 260
-                </p>
-        </div>
+      
 
       
 </div>
